@@ -130,12 +130,10 @@ void allMostPlayedListShow() async {
   final mostplayedDB = await Hive.openBox<songsmodel>('mostplayedDB');
   mostplayedsongNotifier.value.clear();
   for (var element in mostplayedDB.values) {
-    print("the count of number songs that played ${element.count}");
     if (element.count >= 2) {
       mostplayedsongNotifier.value.add(element);
     }
   }
-  print("object");
   for (int i = 0; i < mostplayedsongNotifier.value.length; i++) {
     for (int j = i + 1; j < mostplayedsongNotifier.value.length; j++) {
       if (mostplayedsongNotifier.value[i].count <

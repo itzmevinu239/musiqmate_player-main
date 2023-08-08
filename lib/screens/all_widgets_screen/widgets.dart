@@ -559,7 +559,7 @@ class playlistnameupdate {
 
   void _submitForm() {
     final textValue = _playlisttexcontroller.text;
-    print('textcontroller = $textValue');
+    // print('textcontroller = $textValue');
     List<songsmodel> listarray = [];
     playlistrename(textValue, listarray, context, index);
     Navigator.pop(context);
@@ -568,14 +568,14 @@ class playlistnameupdate {
 
 // music player Slider......
 
-class musicsliders extends StatefulWidget {
-  const musicsliders({super.key});
+class Musicsliders extends StatefulWidget {
+  const Musicsliders({super.key});
 
   @override
-  State<musicsliders> createState() => _musicslidersState();
+  State<Musicsliders> createState() => _MusicslidersState();
 }
 
-class _musicslidersState extends State<musicsliders> {
+class _MusicslidersState extends State<Musicsliders> {
   double slidervalue = 0;
 
   double duration = 0;
@@ -618,8 +618,8 @@ class _musicslidersState extends State<musicsliders> {
   }
 }
 
-class recentlyplayedandmostplayed extends StatefulWidget {
-  recentlyplayedandmostplayed(
+class Recentlyplayedandmostplayed extends StatefulWidget {
+  Recentlyplayedandmostplayed(
       {super.key,
       required this.data,
       required this.index,
@@ -629,12 +629,12 @@ class recentlyplayedandmostplayed extends StatefulWidget {
   List<songsmodel> newlist;
 
   @override
-  State<recentlyplayedandmostplayed> createState() =>
-      _recentlyplayedandmostplayedState();
+  State<Recentlyplayedandmostplayed> createState() =>
+      _RecentlyplayedandmostplayedState();
 }
 
-class _recentlyplayedandmostplayedState
-    extends State<recentlyplayedandmostplayed> {
+class _RecentlyplayedandmostplayedState
+    extends State<Recentlyplayedandmostplayed> {
   @override
   Widget build(BuildContext context) {
     bool isChecking = favouritecheckings(widget.data);
@@ -700,7 +700,7 @@ class _recentlyplayedandmostplayedState
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => now_Playing(
+            builder: (context) => NowPlaying(
               data: widget.data,
             ),
           ),

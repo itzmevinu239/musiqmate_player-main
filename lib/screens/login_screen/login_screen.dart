@@ -97,7 +97,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   sharedpre.setBool("check", true);
                   // ignore: use_build_context_synchronously
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => nav_Main_Page()));
+                      MaterialPageRoute(builder: (context) => NavMainPage()));
                 },
                 child: Container(
                   width: 110,

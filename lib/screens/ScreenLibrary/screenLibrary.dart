@@ -9,16 +9,17 @@ import '../drawer_screen/main_drawer.dart';
 import '../MostPlayed/most_played.dart';
 import '../all_widgets_screen/widgets.dart';
 
-class library_Screen extends StatefulWidget {
-  const library_Screen({
+class LibraryScreen extends StatefulWidget {
+  const LibraryScreen({
     super.key,
   });
 
   @override
-  State<library_Screen> createState() => _library_ScreenState();
+  State<LibraryScreen> createState() => _LibraryScreenState();
 }
 
-class _library_ScreenState extends State<library_Screen> {
+class _LibraryScreenState extends State<LibraryScreen> {
+  @override
   void initState() {
     super.initState();
     allrecentlyplaylistshow();
@@ -51,7 +52,7 @@ class _library_ScreenState extends State<library_Screen> {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        drawer: const main_drawer(),
+        drawer: const MainDrawer(),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
@@ -120,7 +121,7 @@ class _library_ScreenState extends State<library_Screen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const Playlist_Listing()));
+                                            const PlaylistListing()));
                               },
                             ),
                             const SizedBox(
@@ -169,7 +170,8 @@ class _library_ScreenState extends State<library_Screen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => favorite_list()));
+                                        builder: (context) =>
+                                            const FavoriteList()));
                               },
                             ),
                             const SizedBox(
@@ -218,7 +220,7 @@ class _library_ScreenState extends State<library_Screen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (contect) => const most_played(),
+                                    builder: (contect) => const Mostplayed(),
                                   ),
                                 );
                               },
@@ -261,7 +263,7 @@ class _library_ScreenState extends State<library_Screen> {
                                             50, 255, 255, 255),
                                         borderRadius: BorderRadius.circular(8)),
                                     margin: const EdgeInsets.only(bottom: 8),
-                                    child: recentlyplayedandmostplayed(
+                                    child: Recentlyplayedandmostplayed(
                                         data: data,
                                         index: index,
                                         newlist: recentlist),

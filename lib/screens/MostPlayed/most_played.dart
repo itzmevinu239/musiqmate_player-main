@@ -5,14 +5,14 @@ import '../../db/model/songsmodel.dart';
 import '../../notifirelist/songNotifierList.dart';
 import '../all_widgets_screen/widgets.dart';
 
-class most_played extends StatefulWidget {
-  const most_played({super.key});
+class Mostplayed extends StatefulWidget {
+  const Mostplayed({super.key});
 
   @override
-  State<most_played> createState() => _most_playedState();
+  State<Mostplayed> createState() => _MostplayedState();
 }
 
-class _most_playedState extends State<most_played> {
+class _MostplayedState extends State<Mostplayed> {
   @override
   Widget build(BuildContext context) {
     allMostPlayedListShow();
@@ -63,7 +63,7 @@ class _most_playedState extends State<most_played> {
                                         const Color.fromARGB(50, 255, 255, 255),
                                     borderRadius: BorderRadius.circular(8)),
                                 margin: const EdgeInsets.only(bottom: 5),
-                                child: recentlyplayedandmostplayed(
+                                child: Recentlyplayedandmostplayed(
                                     data: data,
                                     index: index,
                                     newlist: mostplayed))

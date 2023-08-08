@@ -6,19 +6,20 @@ import 'package:musiq_player/screens/searchScreen/search.dart';
 import '../screens/all_songs_screen/all_Songs.dart';
 import '../screens/ScreenLibrary/screenLibrary.dart';
 
-class nav_Main_Page extends StatefulWidget {
-  nav_Main_Page({super.key, this.data});
+// ignore: must_be_immutable
+class NavMainPage extends StatefulWidget {
+  NavMainPage({super.key, this.data});
   songsmodel? data;
 
   @override
-  State<nav_Main_Page> createState() => _nav_Main_PageState();
+  State<NavMainPage> createState() => _NavMainPageState();
 }
 
-class _nav_Main_PageState extends State<nav_Main_Page> {
+class _NavMainPageState extends State<NavMainPage> {
   List pages = [
-    const all_songs(),
+    const Allsongs(),
     const search_screen(),
-    const library_Screen(),
+    const LibraryScreen(),
   ];
 
   @override
@@ -32,10 +33,10 @@ class _nav_Main_PageState extends State<nav_Main_Page> {
           },
         ),
       ),
-      bottomNavigationBar: Wrap(
+      bottomNavigationBar: const Wrap(
         children: [
-          miniplaye_r(),
-          const nav_bar(),
+          Miniplayer(),
+          NavBar(),
         ],
       ),
     );

@@ -3,7 +3,7 @@ import '../../db/model/songsmodel.dart';
 import '../../notifirelist/songNotifierList.dart';
 
 void findsong(int id) {
-  print("sonngs" +id.toString());
+  // print("sonngs" +id.toString());
   for (var element in allSongListNotifier.value) {
     if (element.id == id) {
       addrecentlyplayed(element);

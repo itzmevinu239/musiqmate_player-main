@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musiq_player/screens/NowPlaying/now_playing.dart';
 import 'package:on_audio_query/on_audio_query.dart';
@@ -153,7 +152,7 @@ class _search_screenState extends State<search_screen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => now_Playing(
+                                  builder: (context) => NowPlaying(
                                     data: data,
                                   ),
                                 ),

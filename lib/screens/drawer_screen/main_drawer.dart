@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:musiq_player/screens/dialog_screen/privacy_policy.dart';
 import 'package:musiq_player/screens/dialog_screen/terms_condition.dart';
 
-class main_drawer extends StatelessWidget {
-  const main_drawer({super.key});
+class MainDrawer extends StatelessWidget {
+  const MainDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class main_drawer extends StatelessWidget {
                         showDialog(
                             context: context,
                             builder: (context) {
-                              return privacydialoge(
+                              return PrivacyDialoge(
                                   mdFileName: 'Privacy_policy.md');
                             });
                       },
@@ -112,7 +112,7 @@ class main_drawer extends StatelessWidget {
                         showDialog(
                             context: context,
                             builder: (context) {
-                              return Terms_condition(
+                              return TermsCondition(
                                   mdFileName1: 'Terms_And_Condition.md');
                             });
                       },

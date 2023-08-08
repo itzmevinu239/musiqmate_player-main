@@ -151,7 +151,7 @@ class _PlayListSongListingState extends State<PlayListSongListing> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => now_Playing(
+                                        builder: (context) => NowPlaying(
                                           data: data,
                                         ),
                                       ),

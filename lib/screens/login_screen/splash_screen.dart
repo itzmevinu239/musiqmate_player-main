@@ -6,14 +6,14 @@ import 'package:musiq_player/navbar/main_page.dart';
 import 'package:musiq_player/screens/login_screen/login_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class splash_main extends StatefulWidget {
-  const splash_main({super.key});
+class SplashMain extends StatefulWidget {
+  const SplashMain({super.key});
 
   @override
-  State<splash_main> createState() => _splash_mainState();
+  State<SplashMain> createState() => _SplashMainState();
 }
 
-class _splash_mainState extends State<splash_main> {
+class _SplashMainState extends State<SplashMain> {
   double tern = 1;
   @override
   void initState() {
@@ -33,7 +33,7 @@ class _splash_mainState extends State<splash_main> {
           child: Image.asset('assets/Images/Logo.png'),
         ),
         backgroundColor: const Color(0xFF8028DF),
-        nextScreen: nav_Main_Page());
+        nextScreen: NavMainPage());
   }
 }
 
@@ -42,6 +42,6 @@ checkbool(context) async {
   final check = sharedpre.getBool("check");
   Navigator.of(context).pushReplacement(MaterialPageRoute(
     builder: (context) =>
-        check == null ? const SplashScreen() : nav_Main_Page(),
+        check == null ? const SplashScreen() : NavMainPage(),
   ));
 }

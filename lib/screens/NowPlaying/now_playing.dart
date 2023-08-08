@@ -12,19 +12,19 @@ import '../screenFunction/screen_function.dart';
 bool isshuffle = false;
 bool isloop = false;
 
-class now_Playing extends StatefulWidget {
-  const now_Playing({
+class NowPlaying extends StatefulWidget {
+  const NowPlaying({
     super.key,
     this.data,
   });
   final songsmodel? data;
 
   @override
-  State<now_Playing> createState() => _now_PlayingState();
+  State<NowPlaying> createState() => _NowPlayingState();
 }
 
-class _now_PlayingState extends State<now_Playing> {
-  double _currentvalue = 0;
+class _NowPlayingState extends State<NowPlaying> {
+  // final double _currentvalue = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class _now_PlayingState extends State<now_Playing> {
                     ),
                     Column(
                       children: [
-                        musicsliders(),
+                        const Musicsliders(),
                         Padding(
                           padding: const EdgeInsets.only(left: 22, right: 22),
                           child: Row(

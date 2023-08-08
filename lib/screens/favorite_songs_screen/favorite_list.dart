@@ -6,16 +6,16 @@ import '../../controler/player_controller.dart';
 import '../../db/functions/dbfunctions.dart';
 import '../../db/model/songsmodel.dart';
 
-class favorite_list extends StatefulWidget {
-  const favorite_list({
+class FavoriteList extends StatefulWidget {
+  const FavoriteList({
     super.key,
   });
 
   @override
-  State<favorite_list> createState() => _favorite_listState();
+  State<FavoriteList> createState() => _FavoriteListState();
 }
 
-class _favorite_listState extends State<favorite_list> {
+class _FavoriteListState extends State<FavoriteList> {
   @override
   void initState() {
     // TODO: implement initState
@@ -103,7 +103,7 @@ class _favorite_listState extends State<favorite_list> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => now_Playing(
+                                        builder: (context) => NowPlaying(
                                           data: data,
                                         ),
                                       ));

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-class Terms_condition extends StatelessWidget {
-  Terms_condition({super.key, this.radius = 8, required this.mdFileName1})
+class TermsCondition extends StatelessWidget {
+  TermsCondition({super.key, this.radius = 8, required this.mdFileName1})
       : assert(mdFileName1.contains('.md'));
   final double radius;
   final String mdFileName1;

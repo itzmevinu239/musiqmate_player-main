@@ -5,17 +5,17 @@ import '../../db/model/playlistmodel.dart';
 import '../all_widgets_screen/widgets.dart';
 
 // ignore: camel_case_types
-class Playlist_Listing extends StatefulWidget {
- const Playlist_Listing({
+class PlaylistListing extends StatefulWidget {
+ const PlaylistListing({
     super.key,
   });
 
   @override
-  State<Playlist_Listing> createState() => Playlist_ListingState();
+  State<PlaylistListing> createState() => PlaylistListingState();
 }
 
 // ignore: camel_case_types
-class Playlist_ListingState extends State<Playlist_Listing> {
+class PlaylistListingState extends State<PlaylistListing> {
   @override
   Widget build(BuildContext context) {
     addplaylistdbtovaluelistenable();

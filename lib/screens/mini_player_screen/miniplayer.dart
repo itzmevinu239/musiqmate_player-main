@@ -6,14 +6,14 @@ import 'package:on_audio_query/on_audio_query.dart';
 import 'package:text_scroll/text_scroll.dart';
 import '../screenFunction/screen_function.dart';
 
-class miniplaye_r extends StatefulWidget {
-  miniplaye_r({super.key});
+class Miniplayer extends StatefulWidget {
+  const Miniplayer({super.key});
 
   @override
-  State<miniplaye_r> createState() => _MiniPlayerState();
+  State<Miniplayer> createState() => _MiniPlayerState();
 }
 
-class _MiniPlayerState extends State<miniplaye_r> {
+class _MiniPlayerState extends State<Miniplayer> {
   bool isPlaying = true;
 
   @override
@@ -26,7 +26,7 @@ class _MiniPlayerState extends State<miniplaye_r> {
         child: GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const now_Playing()));
+                MaterialPageRoute(builder: (context) => const NowPlaying()));
           },
           child: ListTile(
             tileColor: Colors.amberAccent,

@@ -5,19 +5,18 @@ import 'package:musiq_player/notifirelist/songNotifierList.dart';
 import '../../db/model/songsmodel.dart';
 import '../all_widgets_screen/widgets.dart';
 
-class all_songs extends StatefulWidget {
-  const all_songs({super.key});
+class Allsongs extends StatefulWidget {
+  const Allsongs({super.key});
 
   @override
-  State<all_songs> createState() => _all_songsState();
+  State<Allsongs> createState() => _AllsongsState();
 }
 
 final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer.withId('0');
 
-class _all_songsState extends State<all_songs> {
+class _AllsongsState extends State<Allsongs> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     allsongsfavlistshow();
   }
@@ -32,7 +31,7 @@ class _all_songsState extends State<all_songs> {
     setState(() {});
   }
 
-  final _searchController = TextEditingController();
+  // final _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     allsongsdatashowList();
@@ -40,8 +39,8 @@ class _all_songsState extends State<all_songs> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Container(
-        height: MediaQuery.of(context).size.height*0.3,
-        width: MediaQuery.of(context).size.width*0.2,
+        height: MediaQuery.of(context).size.height * 0.3,
+        width: MediaQuery.of(context).size.width * 0.2,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFF8028DF), Color(0xFF3F9EFD)],
